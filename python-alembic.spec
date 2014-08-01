@@ -94,7 +94,7 @@ Documentation and status of Alembic is at http://readthedocs.org/docs/alembic/
 %endif
 
 %prep
-%setup -q -n %{modname}-%{version}
+%setup -q -n %{modname}-%{upstream_version}
 
 %if 0%{?with_python3}
 rm -rf %{py3dir}
@@ -171,7 +171,7 @@ install -m 0644 alembic.1 %{buildroot}%{_mandir}/man1/alembic.1
 %files
 %doc README.rst LICENSE CHANGES docs
 %{python_sitelib}/%{modname}/
-%{python_sitelib}/%{modname}-%{version}*
+%{python_sitelib}/%{modname}-*
 %{_bindir}/%{modname}
 
 %if 0%{?rhel} && 0%{?rhel} <= 6
@@ -183,7 +183,7 @@ install -m 0644 alembic.1 %{buildroot}%{_mandir}/man1/alembic.1
 %files -n python3-%{modname}
 %doc LICENSE README.rst CHANGES docs
 %{python3_sitelib}/%{modname}/
-%{python3_sitelib}/%{modname}-%{version}-*
+%{python3_sitelib}/%{modname}-*
 %{_bindir}/python3-%{modname}
 %{_mandir}/man1/python3-alembic.1*
 %endif
