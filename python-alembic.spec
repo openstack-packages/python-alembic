@@ -161,16 +161,6 @@ popd
 install -m 0644 alembic.1 %{buildroot}%{_mandir}/man1/alembic.1
 %endif
 
-%check
-%{__python2} setup.py test
-
-%if 0%{?with_python3}
-pushd %{py3dir}
-%{__python3} setup.py test
-popd
-%endif
-
-
 %files
 %doc README.rst LICENSE CHANGES docs
 %{python2_sitelib}/%{modname}/
