@@ -12,7 +12,7 @@
 
 Name:             python-alembic
 Version:          XXX
-Release:          XXX{?dist}
+Release:          XXX
 Summary:          Database migration tool for SQLAlchemy
 
 Group:            Development/Libraries
@@ -183,77 +183,3 @@ install -m 0644 alembic.1 %{buildroot}%{_mandir}/man1/alembic.1
 
 
 %changelog
-* Wed Aug 20 2014 Ralph Bean <rbean@redhat.com> - 0.6.6-1
-- Latest upstream.
-- Modernized python macros.
-- Re-enabled python3 tests.
-- Cleaned up the description formatting.
-
-* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.6.5-3
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
-
-* Tue May 27 2014 Kalev Lember <kalevlember@gmail.com> - 0.6.5-2
-- Rebuilt for https://fedoraproject.org/wiki/Changes/Python_3.4
-
-* Tue May 06 2014 Ralph Bean <rbean@redhat.com> - 0.6.5-1
-- Latest upstream.
-
-* Tue Feb 04 2014 Ralph Bean <rbean@redhat.com> - 0.6.3-1
-- Latest upstream.
-
-* Tue Jan 28 2014 Ralph Bean <rbean@redhat.com> - 0.6.2-2
-- Simplify some nested conditionals.
-- Attempt a better rhel conditional.
-- Added buildtime dep on python-mock for the test suite.
-
-* Tue Jan 28 2014 Ralph Bean <rbean@redhat.com> - 0.6.2-1
-- Latest upstream.
-
-* Mon Jul 29 2013 Ralph Bean <rbean@redhat.com> - 0.5.0-2
-- Add forgotten dependency on python-setuptools.
-  https://bugzilla.redhat.com/show_bug.cgi?id=989016
-
-* Wed Apr 10 2013 Ralph Bean <rbean@redhat.com> - 0.5.0-1
-- Update to 0.5.0
-
-* Thu Mar 14 2013 Pádraig Brady <pbrady@redhat.com> - 0.4.2-1
-- Update to 0.4.2
-
-* Fri Feb 22 2013 Ralph Bean <rbean@redhat.com> - 0.3.4-10
-- Rebuilt again for good measure.
-- Disabled python3 tests.. they started failing in rawhide.
-
-* Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.3.4-10
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
-
-* Wed Sep 12 2012 Ralph Bean <rbean@redhat.com> - 0.3.4-9
-- Require at least sqlalchemy 0.7.4.
-
-* Wed Sep 12 2012 Ralph Bean <rbean@redhat.com> - 0.3.4-8
-- Don't install manpages if they don't exist.
-
-* Wed Sep 12 2012 Ralph Bean <rbean@redhat.com> - 0.3.4-7
-- Stop trying to build man pages for el6.
-
-* Wed Sep 12 2012 Ralph Bean <rbean@redhat.com> - 0.3.4-6
-- Typofix.
-
-* Wed Sep 12 2012 Ralph Bean <rbean@redhat.com> - 0.3.4-5
-- Accomodate older help2man on epel.
-
-* Fri Aug 31 2012 Ralph Bean <rbean@redhat.com> - 0.3.4-4
-- Correct %%files entries for the man pages.
-
-* Fri Aug 31 2012 Ralph Bean <rbean@redhat.com> - 0.3.4-3
-- Include docs folder in %%doc section.
-- Use help2man to build man pages for executables.
-- Remove article from summary (cosmetic).
-- Add trailing slash to directories in %%files (cosmetic).
-
-* Thu Jul 05 2012 Ralph Bean <rbean@redhat.com> - 0.3.4-2
-- Require python-argparse if running on py2.6 or earlier.
-- Require the forward-compat python-sqlalchemy on epel.
-- Require the forward-compat python-nose on epel.
-
-* Thu Jul 05 2012 Ralph Bean <rbean@redhat.com> - 0.3.4-1
-- initial package for Fedora
